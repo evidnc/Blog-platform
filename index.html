@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="header__logo logo">
+                <img src="/img/logo.svg" alt="Логотип">
+            </a>
+            <div class="header__buttons">
+                <a class="Login">
+                    Войти
+                </a>
+                <a class="CreateAcc">
+                    Создать аккаунт
+                </a>
+                <a class="WriteSt">
+                    Написать статью
+                </a>
+                <a class="LogOut">
+                    Выйти
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__container">
+            <div class="main__wrapper">
+                <div class="posts__wrapper">
+                    <div class="post__root">
+                        <img class="post__image" src="img/postimage.png"
+                             alt="Roast the code #1 | Rock Paper Scissors">
+                        <div class="post__wrapper">
+                            <div class="userInfo__wrapper">
+                                <img class="userInfo__avatar"
+                                     src="img/a5359a24-b652-46be-8898-2c5df32aa6e0.webp"
+                                     alt="Keff">
+                                <div class="userInfo__details">
+                                        <span
+                                                class="userInfo__username">Keff</span>
+                                    <span
+                                            class="userInfo__date">20 октября 2022 г.</span>
+                                </div>
+                            </div>
+                            <div class="post__indention">
+                                <h2 class="post__title"><a
+                                        href="#">Roast the code #1 | Rock Paper
+                                    Scissors</a>
+                                </h2>
+                                <ul class="post__tags">
+                                    <li><a href="http://localhost:3000/tag/react">#react</a></li>
+                                    <li><a href="http://localhost:3000/tag/fun">#fun</a></li>
+                                    <li><a href="http://localhost:3000/tag/typescript">#typescript</a></li>
+                                </ul>
+                                <ul class="post__details">
+                                    <li>
+                                        <svg class="svgIcon__eye"
+                                             focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                             data-testid="RemoveRedEyeOutlinedIcon">
+                                            <path d="M12 6.5c3.79 0 7.17 2.13 8.82 5.5-1.65 3.37-5.02 5.5-8.82 5.5S4.83 15.37 3.18 12C4.83 8.63 8.21 6.5 12 6.5m0-2C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5m0-2c-2.48 0-4.5 2.02-4.5 4.5s2.02 4.5 4.5 4.5 4.5-2.02 4.5-4.5-2.02-4.5-4.5-4.5z"></path>
+                                        </svg>
+                                        <span>150</span></li>
+                                    <li>
+                                        <svg class="svgIcon__chat"
+                                             focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                             data-testid="ChatBubbleOutlineOutlinedIcon">
+                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"></path>
+                                        </svg>
+                                        <span>3</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__wrapper">
+                    <div class="sidebarTags__wrapper">
+                        <h6 class="sidebarTags__title">
+                            Тэги</h6>
+                        <ul class="sidebarTags__list">
+                            <a
+                                    href="#"
+                                    style="text-decoration: none; color: black;">
+                                <li class="sidebarTags__list-item">
+                                    <div class="item__wrapper"
+                                         tabindex="0" role="button">
+                                        <div class="icon__wrapper">
+                                            <svg class="svgIcon-tag"
+                                                 focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                                 data-testid="TagIcon">
+                                                <path d="M20 10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4h4zm-6 4h-4v-4h4v4z"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="text__wrapper">
+                                                <span
+                                                        class="tags__text">react
+                                                </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </a>
+                            <a
+                                    href="#"
+                                    style="text-decoration: none; color: black;">
+                                <li class="sidebarTags__list-item">
+                                    <div class="item__wrapper"
+                                         tabindex="0" role="button">
+                                        <div class="icon__wrapper">
+                                            <svg class="svgIcon-tag"
+                                                 focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                                 data-testid="TagIcon">
+                                                <path d="M20 10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4h4zm-6 4h-4v-4h4v4z"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="text__wrapper">
+                                                <span
+                                                        class="tags__text">typescript
+                                                </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </a>
+                            <a
+                                    href="#"
+                                    style="text-decoration: none; color: black;">
+                                <li class="sidebarTags__list-item">
+                                    <div class="item__wrapper"
+                                         tabindex="0" role="button">
+                                        <div class="icon__wrapper">
+                                            <svg class="svgIcon-tag"
+                                                 focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                                 data-testid="TagIcon">
+                                                <path d="M20 10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4h4zm-6 4h-4v-4h4v4z"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="text__wrapper">
+                                                <span
+                                                        class="tags__text">заметки
+                                                </span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </a>
+
+                        </ul>
+                    </div>
+                    <div class="sideBarComments__wrapper">
+                        <h6 class="sideBarComments__title">
+                            Комментарии</h6>
+                        <ul class="sideBarComments__list">
+                            <li class="sideBarComments__item">
+                                <div class="avatarComments__wrapper">
+                                    <div class="avatarComments_wrap">
+                                        <img
+                                                alt="Вася Пупкин" src="img/1.jpg"
+                                                class="userAvatar">
+                                    </div>
+                                </div>
+                                <div class="sideBarComment__wrapper">
+                                    <span class="sideBarComment__userName">Вася Пупкин</span>
+                                    <p class="sideBarComment__text">
+                                        Это тестовый комментарий</p>
+                                </div>
+                            </li>
+                            <li class="sideBarComments__separator"
+                                role="separator"></li>
+                            <li class="sideBarComments__item">
+                                <div class="avatarComments__wrapper">
+                                    <div class="avatarComments_wrap">
+                                        <img
+                                                alt="Вася Пупкин" src="img/2.jpg"
+                                                class="userAvatar">
+                                    </div>
+                                </div>
+                                <div class="sideBarComment__wrapper">
+                                    <span class="sideBarComment__userName">Иван Пупкин</span>
+                                    <p class="sideBarComment__text">
+                                        Это тестовый комментарий</p>
+                                </div>
+                            </li>
+                            <li class="sideBarComments__separator"
+                                role="separator"></li>
+                            <li class="sideBarComments__item">
+                                <div class="avatarComments__wrapper">
+                                    <div class="avatarComments_wrap">
+                                        <img
+                                                alt="Вася Пупкин" src="img/5.jpg"
+                                                class="userAvatar">
+                                    </div>
+                                </div>
+                                <div class="sideBarComment__wrapper">
+                                    <span class="sideBarComment__userName">Саня Пупкин</span>
+                                    <p class="sideBarComment__text">
+                                        Это тестовый комментарий</p>
+                                </div>
+                            </li>
+                            <li class="sideBarComments__separator"
+                                role="separator"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fullPost__wrapper">
+                <img class="fullPost__image"
+                     src="img/postimage.png"
+                     alt="Roast the code #1 | Rock Paper Scissors">
+                <div class="fullPost__wrapper">
+                    <div class="userInfo__wrapper">
+                        <img class="userInfo__avatar"
+                             src="img/a5359a24-b652-46be-8898-2c5df32aa6e0.webp"
+                             alt="Keff">
+                        <div class="userInfo__details">
+                                <span
+                                        class="userInfo__username">Keff</span>
+                            <span
+                                    class="userInfo__date">20 октября 2022 г.</span>
+                        </div>
+                    </div>
+                    <div class="post__indention">
+                        <h2 class="post__title">Roast the
+                            code #1
+                            | Rock Paper Scissors</h2>
+                        <ul class="post__tags">
+                            <li><a href="http://localhost:3000/tag/react">#react</a></li>
+                            <li><a href="http://localhost:3000/tag/fun">#fun</a></li>
+                            <li><a href="http://localhost:3000/tag/typescript">#typescript</a></li>
+                        </ul>
+                        <div class="fullPost__content">
+                            <p>Hey there! 👋 I'm starting a new series called "Roast the
+                                Code",
+                                where I will share some code, and let YOU roast and improve it. There's not much
+                                more to
+                                it,
+                                just be polite and constructive, this is an exercise so we can all learn together.
+                                Now
+                                then,
+                                head over to the repo and roast as hard as you can!!
+                            </p>
+                        </div>
+                        <ul class="post__details">
+                            <li>
+                                <svg class="svgIcon__eye"
+                                     focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                     data-testid="RemoveRedEyeOutlinedIcon">
+                                    <path d="M12 6.5c3.79 0 7.17 2.13 8.82 5.5-1.65 3.37-5.02 5.5-8.82 5.5S4.83 15.37 3.18 12C4.83 8.63 8.21 6.5 12 6.5m0-2C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5-2.5-1.12-2.5-2.5 1.12-2.5 2.5-2.5m0-2c-2.48 0-4.5 2.02-4.5 4.5s2.02 4.5 4.5 4.5 4.5-2.02 4.5-4.5-2.02-4.5-4.5-4.5z"></path>
+                                </svg>
+                                <span>150</span></li>
+                            <li>
+                                <svg class="svgIcon__chat"
+                                     focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                     data-testid="ChatBubbleOutlineOutlinedIcon">
+                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"></path>
+                                </svg>
+                                <span>3</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fullPost__comment">
+                <h6 class="sideBarComments__title">
+                    Комментарии</h6>
+                <ul class="sideBarComments__list">
+                    <li class="sideBarComments__item">
+                        <div class="avatarComments__wrapper">
+                            <div class="avatarComments_wrap">
+                                <img
+                                        alt="Вася Пупкин"
+                                        src="img/1.jpg"
+                                        class="userAvatar">
+                            </div>
+                        </div>
+                        <div class="sideBarComment__wrapper">
+                                <span
+                                        class="sideBarComment__userName">Иван Пупкин</span>
+                            <p class="sideBarComment__text">
+                                Это тестовый комментарий 555555</p></div>
+                    </li>
+                    <li class="sideBarComments__separator" role="separator"></li>
+                    <li class="sideBarComments__item">
+                        <div class="avatarComments__wrapper">
+                            <div class="avatarComments_wrap">
+                                <img
+                                        alt="Вася Пупкин"
+                                        src="img/2.jpg"
+                                        class="userAvatar">
+                            </div>
+                        </div>
+                        <div class="sideBarComment__wrapper">
+                                <span
+                                        class="sideBarComment__userName">Саня Пупкин</span>
+                            <p class="sideBarComment__text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iusto rerum
+                                sapiente. Blanditiis debitis eos error ex, laboriosam nemo quae saepe? At delectus
+                                fuga itaque? Ad consequuntur in necessitatibus sed.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="sideBarComments__separator" role="separator"></li>
+                </ul>
+                <div class="fullPost__addComment">
+                    <div class="fullPost__avatar">
+                        <img
+                                src="img/5.jpg" class="userAvatar">
+                    </div>
+                    <div class="fullPost__addComment-form">
+                        <div class="fullPost__addComment-textarea">
+                            <label class="fullPost__addComment-label"
+                                   data-shrink="false" for=":r1:" id=":r1:-label">Написать комментарий
+                            </label>
+                            <div class="fullPostTextarea__wrapper">
+                            <textarea aria-invalid="false" id=":r1:"
+                                      class="fullPostTextarea__area"
+                                      style="height: 23px; overflow: hidden;">
+
+                            </textarea>
+                                <textarea aria-hidden="true"
+                                          class="fullPostTextarea__areaX"
+                                          readonly=""
+                                          tabindex="-1"
+                                          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0px); padding: 0px; width: 1032px;">x</textarea>
+                                <fieldset aria-hidden="true"
+                                          class="fullPostTextarea__fieldset">
+                                    <legend class="fullPostTextarea__legend"><span>Написать комментарий</span></legend>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <button class="fullPost__button"
+                                tabindex="0" type="button">Отправить<span
+                                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="postAdd__paper"
+                 style="padding: 30px;">
+                <button class="postAdd__paper-button"
+                        tabindex="0" type="button">Загрузить превью<span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button>
+                <input type="file" hidden=""><br><br>
+                <div class="postAdd__paper-wrapper">
+                    <div class="postAdd__paper-wrap">
+                        <input aria-invalid="false" id=":r3:" placeholder="Заголовок статьи..." type="text"
+                               class="postAdd__paper-input"
+                               value="">
+                    </div>
+                </div>
+                <div class="postAdd__tags-wrapper">
+                    <div class="postAdd__tags-wrap">
+                        <input aria-invalid="false" id=":r5:" placeholder="Тэги" type="text"
+                               class="postAdd__tags-input"
+                               value="">
+                    </div>
+                </div>
+                <div class="postAdd__textarea">
+                    <textarea>
+
+                    </textarea>
+                    <div class="postAdd__wrapper">
+                        <div class="postAdd__details" translate="no">
+                            <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 14px; left: 14px;">
+                            <textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0"
+                                      style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea>
+                            </div>
+                            <div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true">
+                                <div style="min-width: 1px; height: 0px;"></div>
+                            </div>
+                            <div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true">
+                                <div style="height: 100%; min-height: 1px; width: 0px;"></div>
+                            </div>
+                            <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+                            <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+                            <div class="CodeMirror-scroll" tabindex="-1" style="min-height: 400px; height: 400px;">
+                                <div class="CodeMirror-sizer"
+                                     style="margin-left: 0px; margin-bottom: -17px; border-right-width: 33px; min-height: 41px; padding-right: 0px; padding-bottom: 0px;">
+                                    <div style="position: relative; top: 0px;">
+                                        <div class="CodeMirror-lines" role="presentation">
+                                            <div role="presentation" style="position: relative; outline: none;">
+                                            <pre class="CodeMirror-placeholder CodeMirror-line-like"
+                                                 style="height: 0px; overflow: visible; direction: ltr;">Введите текст...</pre>
+                                                <div class="CodeMirror-measure">
+                                                    <pre class="CodeMirror-line-like"><span></span></pre>
+                                                </div>
+                                                <div class="CodeMirror-measure"></div>
+                                                <div style="position: relative; z-index: 1;"></div>
+                                                <div class="CodeMirror-cursors" style="">
+                                                    <div class="CodeMirror-cursor"
+                                                         style="left: 4px; top: 0px; height: 33px;">&nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="CodeMirror-code" role="presentation">
+                                                <pre class=" CodeMirror-line " role="presentation"><span
+                                                        role="presentation" style="padding-right: 0.1px;"><span
+                                                        cm-text="">​</span></span></pre>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="position: absolute; height: 33px; width: 1px; border-bottom: 0px solid transparent; top: 41px;"></div>
+                                <div class="CodeMirror-gutters" style="display: none; height: 74px;"></div>
+                            </div>
+                        </div>
+                        <div class="editor-preview-side editor-preview" style="height: 420px;"></div>
+                    </div>
+                </div>
+                <div class="addPost__buttons-wrapper">
+                    <button class="addPost__button-add"
+                            tabindex="0" type="button">Опубликовать
+                        <span></span>
+                    </button>
+                    <a href="">
+                        <button class="addPost__button-exit"
+                                tabindex="0" type="button">Отмена<span></span>
+                        </button>
+                    </a></div>
+            </div>
+            <div class="login__wrapper">
+                <h5 class="login__title">
+                    Вход в
+                    аккаунт</h5>
+                <div class="loginEmail__wrapper">
+                    <label class="loginEmail__label"
+                           data-shrink="false" for=":r7:" id=":r7:-label">E-Mail</label>
+                    <div class="loginEmailInput__wrapper">
+                        <input aria-invalid="true" aria-describedby=":r7:-helper-text" id=":r7:" type="text"
+                               class="loginEmailInput__input"
+                               value="">
+                        <fieldset aria-hidden="true"
+                                  class="loginEmailInput__fieldset">
+                            <legend class="loginEmailInput__legend"><span>E-Mail</span></legend>
+                        </fieldset>
+                    </div>
+                    <p class="loginEmailInput__p"
+                       id=":r7:-helper-text">Неверно указана почта</p></div>
+                <div class="loginPassword__wrapper">
+                    <label class="loginPassword__label"
+                           data-shrink="false" for=":r9:" id=":r9:-label">Пароль</label>
+                    <div class="loginPasswordInput__wrapper">
+                        <input aria-invalid="false" id=":r9:" type="text"
+                               class="loginPasswordInput__input"
+                               value="">
+                        <fieldset aria-hidden="true"
+                                  class="loginPasswordInput__fieldset">
+                            <legend class="loginPasswordInput__legend"><span>Пароль</span></legend>
+                        </fieldset>
+                    </div>
+                </div>
+                <button class="loginButton"
+                        tabindex="0" type="button">Войти<span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button>
+            </div>
+            <div class="createAcc__wrapper">
+                <h5 class="createAcc__title">
+                    Создание
+                    аккаунта</h5>
+                <div class="createAccAvatar__wrapper">
+                    <div class="createAccAvatar__box">
+                        <svg class="svgIcon__avatar"
+                             focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PersonIcon">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="createAcc__name">
+                    <label class="createAcc__name-label"
+                           data-shrink="false" for=":rb:" id=":rb:-label">Полное имя</label>
+                    <div class="createAccName__box">
+                        <input aria-invalid="false" id=":rb:" type="text"
+                               class="createAccName__input"
+                               value="">
+                        <fieldset aria-hidden="true"
+                                  class="createAccName__fieldset">
+                            <legend class="createAccName__legend"><span>Полное имя</span></legend>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="createAcc__name">
+                    <label class="createAcc__name-label"
+                           data-shrink="false" for=":rb:" id=":rb:-label">Email</label>
+                    <div class="createAccName__box">
+                        <input aria-invalid="false" id=":rb:" type="text"
+                               class="createAccName__input"
+                               value="">
+                        <fieldset aria-hidden="true"
+                                  class="createAccName__fieldset">
+                            <legend class="createAccName__legend"><span>Email</span></legend>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="createAcc__name">
+                    <label class="createAcc__name-label"
+                           data-shrink="false" for=":rb:" id=":rb:-label">Полное имя</label>
+                    <div class="createAccName__box">
+                        <input aria-invalid="false" id=":rb:" type="text"
+                               class="createAccName__input"
+                               value="">
+                        <fieldset aria-hidden="true"
+                                  class="createAccName__fieldset">
+                            <legend class="createAccName__legend"><span>Полное имя</span></legend>
+                        </fieldset>
+                    </div>
+                </div>
+                <button class="createAcc__button"
+                        tabindex="0" type="button">Зарегистрироваться<span
+                        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button>
+            </div>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
