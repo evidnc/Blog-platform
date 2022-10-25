@@ -1,0 +1,51 @@
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+    padding: 10px 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.write-button {
+    background-color: #eb0545;
+
+    &:hover {
+        cursor: pointer;
+        transition: background-color 0.3ms ease;
+        background-color: #ed4373;
+    }
+}
+
+.logout-button {
+    background-color: #4361ee;
+
+    &:hover {
+        cursor: pointer;
+        transition: background-color 0.3ms ease;
+        background-color: #022eee;
+    }
+}
+
+.createAcc-button {
+    background-color: #4361ee;
+
+    &:hover {
+        cursor: pointer;
+        transition: background-color 0.3ms ease;
+        background-color: #022eee;
+    }
+}
+
+.login-button {
+    background-color: #4361ee;
+
+    &:hover {
+        cursor: pointer;
+        transition: background-color 0.3ms ease;
+        background-color: #022eee;
+    }
+}

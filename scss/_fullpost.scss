@@ -1,0 +1,82 @@
+.fullPost__box {
+    background-color: #fff;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.fullPost__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding-top: 10px;
+}
+
+.fullPost__wrapper {
+    padding: 10px 20px 20px;
+}
+
+@media (max-width: 768px) {
+    .fullPost__wrapper {
+        padding: 10px 5px 5px;
+    }
+}
+
+.fullPost__content {
+    margin: 30px 0 50px;
+}
+
+.content-text {
+    font-size: 22px;
+    line-height: 36px;
+}
+
+@media (max-width: 768px) {
+    .content-text {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.fullPost__addComment {
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 17px;
+}
+
+.addComment {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.addComment__box {
+    display: flex;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid gray;
+}
+
+.addComment__input {
+    font: inherit;
+    letter-spacing: inherit;
+    box-sizing: content-box;
+    background: none;
+    width: 100%;
+    padding: 16px 14px;
+}
+
+.addComment__button {
+    display: flex;
+    justify-content: center;
+    background-color: #022eee;
+    max-width: 100px;
+}
+
+.addComment__button:hover {
+    cursor: pointer;
+    transition: background-color 0.3ms ease;
+    background-color: #4361ee;
+}

@@ -1,0 +1,69 @@
+.createAcc {
+    &__wrapper {
+        background-color: #fff;
+        max-width: 400px;
+        padding: 40px;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        margin: 50px auto;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    &__box {
+        display: flex;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid gray;
+    }
+
+    &__input {
+        font: inherit;
+        letter-spacing: inherit;
+        box-sizing: content-box;
+        background: none;
+        width: 100%;
+        padding: 16px 14px;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        background-color: #022eee;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+            transition: background-color 0.3ms ease;
+            background-color: #4361ee;
+        }
+    }
+}
+
+.createAcc-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #fff;
+        background-color: #bdbdbd;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.svgIcon__avatar {
+    fill: currentColor;
+    width: 75%;
+    height: 75%;
+}
