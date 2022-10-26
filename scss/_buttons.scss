@@ -13,7 +13,7 @@
 
 @media (max-width: 768px) {
     .button {
-        font-size: 13px;
+        font-size: 13px; // Как правило font-size задают четные значения, 14-16-18 и тп.
         padding: 7px 14px;
     }
 

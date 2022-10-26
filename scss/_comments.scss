@@ -5,6 +5,14 @@
     border-radius: 4px;
 }
 
+// Не используешь возможности scss.
+/*.sidebar-comments {
+    // some classes sidebar-comments
+    &__title {
+        // some classes for sidebar-comments__title
+    }
+}*/
+
 .sidebar-comments__title {
     margin: 0;
     padding: 15px 15px 0 15px;
@@ -12,12 +20,15 @@
 
 .comments-list {
     list-style: none;
+    // https://ru.bem.info/methodology/quick-start/#%D0%B1%D0%BB%D0%BE%D0%BA
+    // Блок не должен влиять на свое окружение, т. е. блоку не следует задавать внешнюю геометрию (в виде отступов, границ, влияющих на размеры) и позиционирование.
     margin: 0;
     position: relative;
     padding-top: 8px;
     padding-bottom: 8px;
 }
 
+// Не используешь возможности scss.
 .comments-list__item {
     display: flex;
     justify-content: flex-start;
@@ -36,6 +47,7 @@
     margin-top: 8px;
 }
 
+// Тут IDE жалуется на копипасту "Duplicated code fragment (14 lines long) "
 .avatar-wrapper__box {
     display: flex;
     align-items: center;
@@ -73,6 +85,8 @@
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
+    // Ух, интересное значение, во-первых, оно очень близко к 0, во-вторых, старайся избегать таких дробей значениях свойств
+    // Бывали кейсы, что разные браузеры округляли значения по-разному, лучше оперировать целыми значениями (но кейсы когда понадобится дробь, тоже могут быть)
     letter-spacing: 0.00938em;
     display: block;
 }
@@ -92,7 +106,7 @@
     flex-shrink: 0;
     border-width: 0;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.12);
+    border-color: rgba(0, 0, 0, 0.12); // 3 свойства можно превратить в 1 https://developer.mozilla.org/en-US/docs/Web/CSS/border
     border-bottom-width: thin;
     margin-left: 72px;
 }
