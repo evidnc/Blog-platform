@@ -10,7 +10,6 @@
 
 .posts__wrapper {
     padding-top: 32px;
-    box-sizing: border-box;
     max-width: 66.666667%;
 }
 
@@ -21,8 +20,8 @@
 }
 
 .post {
-    background-color: #fff;
-    border: 1px solid #dedede;
+    background-color: var(--additional-bg-color);
+    border: 1px solid #bcbbbb;
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 15px;
@@ -107,21 +106,19 @@
     opacity: 0.5;
 }
 
-.svgIcon__eye {
+.svg-icon__eye {
     margin-right: 5px;
     height: 1em;
     display: inline-block;
-    fill: currentColor;
     flex-shrink: 0;
     transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     font-size: 1.5rem;
 }
 
-.svgIcon__chat {
+.svg-icon__chat {
     margin-right: 5px;
     height: 1em;
     display: inline-block;
-    fill: currentColor;
     flex-shrink: 0;
     transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     font-size: 1.5rem;

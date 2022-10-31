@@ -1,6 +1,7 @@
+@import "container";
 @import "buttons";
 @import "comments";
-@import "fullpost";
+@import "article";
 @import "header";
 @import "inputfield";
 @import "login";
@@ -50,12 +51,12 @@ body {
 
 body {
     color: rgba(0, 0, 0, 0.87);
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: var(--main-font-family);
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.00938em;
-    background-color: #f5f5f5;
+    background-color: var(--main-bg-color);
 }
 
 .wrapper {
@@ -69,8 +70,8 @@ body {
     flex: 1 1 auto;
 }
 
-.container {
-    max-width: 1087px;
-    margin: 0 auto;
-    padding: 0 15px;
+:root {
+    --main-font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    --main-bg-color: #f0eeee;
+    --additional-bg-color: #fff;
 }

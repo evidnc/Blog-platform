@@ -1,6 +1,6 @@
-.createAcc {
+.registration {
     &__wrapper {
-        background-color: #fff;
+        background-color: var(--additional-bg-color);
         max-width: 400px;
         padding: 40px;
         border: 1px solid #dedede;
@@ -45,7 +45,7 @@
     }
 }
 
-.createAcc-avatar {
+.registration-avatar {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
@@ -55,14 +55,14 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        color: #fff;
+        color: var(--additional-bg-color);
         background-color: #bdbdbd;
         width: 100px;
         height: 100px;
     }
 }
 
-.svgIcon__avatar {
+.svg-icon__avatar {
     fill: currentColor;
     width: 75%;
     height: 75%;

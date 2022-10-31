@@ -2,7 +2,7 @@
     // IDE ругается на копипасту, надо устранить её
     // Duplicated code fragment (31 lines long)
     &__wrapper {
-        background-color: #fff;
+        background-color: var(--additional-bg-color);
         max-width: 400px;
         padding: 40px;
         border: 1px solid #dedede;
@@ -27,7 +27,6 @@
     &__input {
         font: inherit;
         letter-spacing: inherit;
-        box-sizing: content-box;
         background: none;
         width: 100%;
         padding: 16px 14px;

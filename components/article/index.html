@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullPost</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <a href="#" class="header__logo logo">
+                <img src="/img/logo.svg" alt="Логотип">
+            </a>
+            <div class="header__buttons buttons">
+                <a href="/components/login/index.html" class="fa fa-sign-in header__login login-button button">
+                    <span class="button__text">
+                        Войти
+                    </span>
+                </a>
+                <a href="/components/registration/index.html"
+                    class="fa fa-plus-square header__create registration-button button">
+                    <span class="button__text">
+                        Создать аккаунт
+                    </span>
+                </a>
+                <button type="button" class="fa fa-file-text header__write write-button button">
+                    <span class="button__text">
+                        Написать статью
+                    </span>
+                </button>
+                <button type="button" class="fa fa-sign-out header__logout logout-button button">
+                    <span class="button__text">
+                        Выйти
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="article">
+        <div class="article__box container">
+            <img class="article__image" src="/img/postimage.png" alt="Roast the code #1 | Rock Paper Scissors">
+            <div class="article__wrapper">
+                <div class="user-info">
+                    <img class="user-info__avatar" src="/img/icons/icon-user.webp" alt="Keff">
+                    <div class="user-info__details">
+                        <span class="details-username">
+                            Keff
+                        </span>
+                        <span class="details-date">
+                            20 октября 2022 г.
+                        </span>
+                    </div>
+                </div>
+                <div class="post__description">
+                    <h2 class="post__title title">
+                        Roast the | Rock Paper Scissors
+                    </h2>
+                    <ul class="post__tags">
+                        <li class="tag-item">
+                            <a class="tag-link" href="#">
+                                #react
+                            </a>
+                        </li>
+                        <li class="tag-item">
+                            <a class="tag-link" href="#">
+                                #angular
+                            </a>
+                        </li>
+                        <li class="tag-item">
+                            <a class="tag-link" href="#">
+                                #typescript
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="article__content">
+                        <p class="content-text">
+                            Hey there! 👋 I'm starting a new series called "Roast the Code", where I will share some
+                            code, and let YOU roast and improve it. There's not much more to it, just be polite and
+                            constructive, this is an exercise so we can all learn together. Now then, head over to the
+                            repo and roast as hard as you can!!
+                        </p>
+                    </div>
+                    <ul class="post__details">
+                        <li class="details-item">
+                            <img class="svg-icon__eye" src="/img/icons/icon-eye.svg" alt="Иконка количества просмотров">
+                            <span>
+                                150
+                            </span>
+                        </li>
+                        <li class="details-item">
+                            <img class="svg-icon__chat" src="/img/icons/icon-chat.svg"
+                                alt="Иконка количества комментариев">
+                            <span>
+                                3
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="article__comment container">
+            <h6 class="sidebar-comments__title title">
+                Комментарии
+            </h6>
+            <ul class="comments-list">
+                <li class="comments-list__item">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-wrapper__box">
+                            <img alt="Вася Пупкин" src="/img/1.jpg" class="avatar">
+                        </div>
+                    </div>
+                    <div class="comment-wrapper">
+                        <span class="comment-wrapper__username">
+                            Иван Пупкин
+                        </span>
+                        <p class="comment-wrapper__text">
+                            Это тестовый комментарий 555555
+                        </p>
+                    </div>
+                </li>
+                <li class="separator">
+
+                </li>
+            </ul>
+            <div class="add-comment">
+                <div class="avatar-wrapper">
+                    <div class="avatar-wrapper__box">
+                        <img alt="Вася Пупкин" src="/img/5.jpg" class="avatar">
+                    </div>
+                </div>
+                <form action="" class="add-comment__form">
+                    <div class="add-comment__wrapper">
+                        <div class="add-comment__comment input-field">
+                            <div class="add-comment__box">
+                                <input type="text" class="add-comment__input" placeholder="Написать комментарий">
+                            </div>
+                        </div>
+                        <button class="add-comment__button button" type="button">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

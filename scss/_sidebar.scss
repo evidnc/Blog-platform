@@ -11,7 +11,7 @@
 }
 
 .sidebar-tags {
-    background-color: #fff;
+    background-color: var(--additional-bg-color);
     color: rgba(0, 0, 0, 0.87);
     border-radius: 4px;
     margin-bottom: 20px;
@@ -38,47 +38,28 @@
     position: relative;
     text-decoration: none;
     width: 100%;
-    box-sizing: border-box;
     text-align: left;
 }
 
 .sidebar-tags__item-wrapper {
     align-items: center;
-    position: relative;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    background-color: transparent;
-    outline: 0;
-    border: 0;
-    margin: 0;
-    border-radius: 0;
-    user-select: none;
-    vertical-align: middle;
-    text-decoration: none;
-    color: inherit;
     display: flex;
-    flex-grow: 1;
-    justify-content: flex-start;
-    min-width: 0;
-    text-align: left;
-    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     padding-left: 16px;
     padding-right: 16px;
+    gap: 10px;
 }
 
 .icon-wrapper {
-    min-width: 56px;
     color: rgba(0, 0, 0, 0.54);
     flex-shrink: 0;
     display: flex;
 }
 
-.svgIcon-tag {
+.svg-icon__tag {
     user-select: none;
     width: 1em;
     height: 1em;
     display: inline-block;
-    fill: currentColor;
     flex-shrink: 0;
     transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     font-size: 1.5rem;
@@ -94,7 +75,7 @@
 /* -----------comments--------------- */
 
 .sidebar-comments {
-    background-color: #fff;
+    background-color: var(--additional-bg-color);
     color: rgba(0, 0, 0, 0.87);
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     border-radius: 4px;
@@ -138,7 +119,6 @@
     flex-shrink: 0;
     width: 40px;
     height: 40px;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 1.25rem;
     line-height: 1;
     border-radius: 50%;
@@ -162,9 +142,8 @@
     margin-bottom: 6px;
 }
 
-.comment-wrapper__userName {
+.comment-wrapper__username {
     margin: 0;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
@@ -174,7 +153,6 @@
 
 .comment-wrapper__text {
     margin: 0;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.43;

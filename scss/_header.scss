@@ -1,5 +1,5 @@
 .header {
-    background-color: #fff;
+    background-color: var(--additional-bg-color);
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 30px;
     padding: 10px 0;
@@ -30,7 +30,7 @@
     }
 }
 
-.createAcc-button {
+.registration-button {
     background-color: #4361ee;
 
     &:hover {

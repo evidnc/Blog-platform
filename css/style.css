@@ -1,3 +1,9 @@
+.container {
+  max-width: 1087px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .button {
   display: inline-flex;
   font-size: 0.875rem;
@@ -17,16 +23,22 @@
     padding: 7px 14px;
   }
   .button__text {
-    font-size: 0;
+    display: none;
   }
 }
 .sidebar-comments {
-  background-color: #fff;
+  background-color: var(--additional-bg-color);
   color: rgba(0, 0, 0, 0.87);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   border-radius: 4px;
 }
 
+/*.sidebar-comments {
+    // some classes sidebar-comments
+    &__title {
+        // some classes for sidebar-comments__title
+    }
+}*/
 .sidebar-comments__title {
   margin: 0;
   padding: 15px 15px 0 15px;
@@ -65,7 +77,6 @@
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1.25rem;
   line-height: 1;
   border-radius: 50%;
@@ -93,23 +104,18 @@
   margin-bottom: 6px;
 }
 
-.comment-wrapper__userName {
+.comment-wrapper__username {
   margin: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
-  letter-spacing: 0.00938em;
   display: block;
 }
 
 .comment-wrapper__text {
   margin: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
   line-height: 1.43;
-  letter-spacing: 0.01071em;
   color: rgba(0, 0, 0, 0.6);
   display: block;
 }
@@ -123,15 +129,51 @@
   margin-left: 72px;
 }
 
-.fullPost__box {
-  background-color: #fff;
+.add-comment {
+  display: flex;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 17px;
+}
+.add-comment__form {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.87);
+}
+.add-comment__box {
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+.add-comment__input {
+  font: inherit;
+  letter-spacing: inherit;
+  background: none;
+  width: 100%;
+  padding: 16px 14px;
+}
+.add-comment__button {
+  display: flex;
+  justify-content: center;
+  background-color: #022eee;
+  max-width: 100px;
+}
+.add-comment__button:hover {
+  cursor: pointer;
+  transition: background-color 0.3ms ease;
+  background-color: #4361ee;
+}
+
+.article__box {
+  background-color: var(--additional-bg-color);
   border: 1px solid #dedede;
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 15px;
 }
 
-.fullPost__image {
+.article__image {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -139,7 +181,7 @@
   padding-top: 10px;
 }
 
-.fullPost__wrapper {
+.article__wrapper {
   padding: 10px 20px 20px;
 }
 
@@ -148,7 +190,7 @@
     padding: 10px 5px 5px;
   }
 }
-.fullPost__content {
+.article__content {
   margin: 30px 0 50px;
 }
 
@@ -163,50 +205,12 @@
     line-height: 20px;
   }
 }
-.fullPost__addComment {
-  display: flex;
-  margin-top: 10px;
-  padding-bottom: 20px;
-  margin-right: 20px;
-  margin-left: 17px;
-}
-
-.addComment {
-  width: 100%;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-.addComment__box {
-  display: flex;
-  width: 100%;
-  border-radius: 4px;
-  border: 1px solid gray;
-}
-
-.addComment__input {
-  font: inherit;
-  letter-spacing: inherit;
-  box-sizing: content-box;
-  background: none;
-  width: 100%;
-  padding: 16px 14px;
-}
-
-.addComment__button {
-  display: flex;
-  justify-content: center;
-  background-color: #022eee;
-  max-width: 100px;
-}
-
-.addComment__button:hover {
-  cursor: pointer;
-  transition: background-color 0.3ms ease;
-  background-color: #4361ee;
+.article__comment {
+  background-color: rgb(248, 247, 237);
 }
 
 .header {
-  background-color: #fff;
+  background-color: var(--additional-bg-color);
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 30px;
   padding: 10px 0;
@@ -234,10 +238,10 @@
   background-color: #022eee;
 }
 
-.createAcc-button {
+.registration-button {
   background-color: #4361ee;
 }
-.createAcc-button:hover {
+.registration-button:hover {
   cursor: pointer;
   transition: background-color 0.3ms ease;
   background-color: #022eee;
@@ -258,7 +262,7 @@
 }
 
 .login__wrapper {
-  background-color: #fff;
+  background-color: var(--additional-bg-color);
   max-width: 400px;
   padding: 40px;
   border: 1px solid #dedede;
@@ -280,7 +284,6 @@
 .login__input {
   font: inherit;
   letter-spacing: inherit;
-  box-sizing: content-box;
   background: none;
   width: 100%;
   padding: 16px 14px;
@@ -308,7 +311,6 @@
 }
 .posts__wrapper {
   padding-top: 32px;
-  box-sizing: border-box;
   max-width: 66.666667%;
 }
 
@@ -318,8 +320,8 @@
   }
 }
 .post {
-  background-color: #fff;
-  border: 1px solid #dedede;
+  background-color: var(--additional-bg-color);
+  border: 1px solid #bcbbbb;
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -397,47 +399,45 @@
   opacity: 0.5;
 }
 
-.svgIcon__eye {
+.svg-icon__eye {
   margin-right: 5px;
   height: 1em;
   display: inline-block;
-  fill: currentColor;
   flex-shrink: 0;
   transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   font-size: 1.5rem;
 }
 
-.svgIcon__chat {
+.svg-icon__chat {
   margin-right: 5px;
   height: 1em;
   display: inline-block;
-  fill: currentColor;
   flex-shrink: 0;
   transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   font-size: 1.5rem;
 }
 
-.createAcc__wrapper {
-  background-color: #fff;
+.registration__wrapper {
+  background-color: var(--additional-bg-color);
   max-width: 400px;
   padding: 40px;
   border: 1px solid #dedede;
   border-radius: 4px;
   margin: 50px auto;
 }
-.createAcc__title {
+.registration__title {
   font-size: 1.5rem;
   text-align: center;
   font-weight: bold;
   margin-bottom: 30px;
 }
-.createAcc__box {
+.registration__box {
   display: flex;
   width: 100%;
   border-radius: 4px;
   border: 1px solid gray;
 }
-.createAcc__input {
+.registration__input {
   font: inherit;
   letter-spacing: inherit;
   box-sizing: content-box;
@@ -445,35 +445,35 @@
   width: 100%;
   padding: 16px 14px;
 }
-.createAcc__button {
+.registration__button {
   display: flex;
   justify-content: center;
   background-color: #022eee;
   width: 100%;
 }
-.createAcc__button:hover {
+.registration__button:hover {
   cursor: pointer;
   transition: background-color 0.3ms ease;
   background-color: #4361ee;
 }
 
-.createAcc-avatar {
+.registration-avatar {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
-.createAcc-avatar__wrapper {
+.registration-avatar__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #fff;
+  color: var(--additional-bg-color);
   background-color: #bdbdbd;
   width: 100px;
   height: 100px;
 }
 
-.svgIcon__avatar {
+.svg-icon__avatar {
   fill: currentColor;
   width: 75%;
   height: 75%;
@@ -491,7 +491,7 @@
   }
 }
 .sidebar-tags {
-  background-color: #fff;
+  background-color: var(--additional-bg-color);
   color: rgba(0, 0, 0, 0.87);
   border-radius: 4px;
   margin-bottom: 20px;
@@ -518,45 +518,24 @@
   position: relative;
   text-decoration: none;
   width: 100%;
-  box-sizing: border-box;
   text-align: left;
 }
 
 .sidebar-tags__item-wrapper {
   align-items: center;
-  position: relative;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-  background-color: transparent;
-  outline: 0;
-  border: 0;
-  margin: 0;
-  border-radius: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  vertical-align: middle;
-  text-decoration: none;
-  color: inherit;
   display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  min-width: 0;
-  text-align: left;
-  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   padding-left: 16px;
   padding-right: 16px;
+  gap: 10px;
 }
 
 .icon-wrapper {
-  min-width: 56px;
   color: rgba(0, 0, 0, 0.54);
   flex-shrink: 0;
   display: flex;
 }
 
-.svgIcon-tag {
+.svg-icon__tag {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -564,7 +543,6 @@
   width: 1em;
   height: 1em;
   display: inline-block;
-  fill: currentColor;
   flex-shrink: 0;
   transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   font-size: 1.5rem;
@@ -579,7 +557,7 @@
 
 /* -----------comments--------------- */
 .sidebar-comments {
-  background-color: #fff;
+  background-color: var(--additional-bg-color);
   color: rgba(0, 0, 0, 0.87);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   border-radius: 4px;
@@ -623,7 +601,6 @@
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1.25rem;
   line-height: 1;
   border-radius: 50%;
@@ -651,9 +628,8 @@
   margin-bottom: 6px;
 }
 
-.comment-wrapper__userName {
+.comment-wrapper__username {
   margin: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
@@ -663,7 +639,6 @@
 
 .comment-wrapper__text {
   margin: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.43;
@@ -682,11 +657,9 @@
 }
 
 .title {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 25px;
   line-height: 1.6;
-  letter-spacing: 0.0075em;
 }
 
 *,
@@ -730,12 +703,12 @@ body {
 
 body {
   color: rgba(0, 0, 0, 0.87);
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: var(--main-font-family);
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0.00938em;
-  background-color: #f5f5f5;
+  background-color: var(--main-bg-color);
 }
 
 .wrapper {
@@ -749,8 +722,8 @@ body {
   flex: 1 1 auto;
 }
 
-.container {
-  max-width: 1087px;
-  margin: 0 auto;
-  padding: 0 15px;
+:root {
+  --main-font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  --main-bg-color: #f0eeee;
+  --additional-bg-color: #fff;
 }/*# sourceMappingURL=style.css.map */
