@@ -291,13 +291,13 @@
 .login__button {
   display: flex;
   justify-content: center;
-  background-color: #4361ee;
+  background-color: #022eee;
   width: 100%;
 }
 .login__button:hover {
   cursor: pointer;
   transition: background-color 0.3ms ease;
-  background-color: #022eee;
+  background-color: #4361ee;
 }
 
 .main__wrapper {
@@ -440,7 +440,6 @@
 .registration__input {
   font: inherit;
   letter-spacing: inherit;
-  box-sizing: content-box;
   background: none;
   width: 100%;
   padding: 16px 14px;
